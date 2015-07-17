@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".actionbarActivity" >
+
+    <!-- Settings, should always be in the overflow -->
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="100"
+        android:title="@string/action_settings"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/logo"
+        android:icon="@drawable/logo"
+        android:showAsAction="always"
+        android:title="@string/action_settings">
+
+        <!-- add button -->
+        <item
+            android:id="@+id/addMenuItem"
+            android:icon="@drawable/add"
+            android:showAsAction="always"
+            android:title="@string/addMedicineName"/>
+
+        <!-- Sync button -->
+        <item
+            android:id="@+id/syncMenuItem"
+            android:icon="@drawable/sync"
+            android:showAsAction="always"
+            android:title="@string/button"/>
+    </item>
+
+</menu>

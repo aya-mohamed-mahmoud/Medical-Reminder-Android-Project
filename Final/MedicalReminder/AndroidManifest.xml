@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.project.medicalreminder"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/medilogooo"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+
+        <!-- aya activities -->
+        <activity
+            android:name=".Welcome"
+            android:label="@string/app_name"
+            android:theme="@style/myTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".SignUp"
+            android:theme="@style/myTheme" >
+        </activity>
+        <activity
+            android:name=".Login"
+            android:theme="@style/myTheme" >
+        </activity>
+        <!-- aya end -->
+
+
+        <!-- hala activities -->
+        <activity
+            android:name=".AddMedicineActivity"
+            android:label="@string/title_activity_add_medicine"
+            android:screenOrientation="portrait"
+            android:theme="@style/myTheme" >
+        </activity>
+        <!-- hala end -->
+
+
+        <!-- shaimaa activities -->
+        <activity
+            android:name=".Alert"
+            android:label="@string/app_name"
+            android:theme="@style/myTheme" >
+        </activity>
+        <activity
+            android:name=".LastListview"
+            android:label="@string/app_name"
+            android:theme="@style/myTheme" >
+        </activity>
+        <activity
+            android:name=".AlertDialog"
+            android:label="@string/app_name"
+            android:theme="@style/myTheme" >
+        </activity>
+
+        <service
+            android:name=".MyServiceAlarm"
+            android:enabled="true" />
+
+        <receiver android:name=".BroadCastActivity" />
+        <!-- shaimaa end -->
+
+
+        <!-- rashwan activities -->
+        <activity
+            android:name=".HomeActivity"
+            android:label="@string/app_name"
+            android:theme="@style/myTheme" >
+        </activity>
+        <activity
+            android:name=".EmptyHome"
+            android:label="@string/app_name"
+            android:theme="@style/myTheme" >
+        </activity>
+        <activity
+            android:name=".EditMedicine"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait"
+            android:theme="@style/myTheme" >
+        </activity>
+        <!-- rashwan end -->
+        <activity
+            android:name=".DismissActivity"
+            android:label="@string/title_activity_dismiss" >
+        </activity>
+    </application>
+
+</manifest>

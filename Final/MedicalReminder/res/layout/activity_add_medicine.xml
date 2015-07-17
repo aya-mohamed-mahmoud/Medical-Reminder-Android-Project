@@ -1,0 +1,362 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg4" >
+
+    <LinearLayout
+        android:id="@+id/MainLayout"
+        style="@style/mainLayoutStyle" >
+
+        <!-- image upload -->
+
+        <LinearLayout
+            android:id="@+id/containerMedicinePhoto"
+            style="@style/uploadImageLayoutStyle" >
+
+            <ImageView
+                android:id="@+id/imagePreview"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:contentDescription="@string/addPhoto"
+                android:gravity="start"
+                android:scaleType="fitXY"
+                android:src="@drawable/medecine" />
+        </LinearLayout>
+        <!-- image upload end -->
+
+        <RelativeLayout
+            android:id="@+id/captureButtonLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+
+            <ImageButton
+                android:id="@+id/btnAddPhoto"
+                style="@style/buttonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/textView1"
+                android:background="@drawable/round_cam_image"
+                android:src="@drawable/cam"
+                android:text="@string/addPhoto" />
+
+            <TextView
+                android:id="@+id/textView1"
+                style="@style/textViewStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:text="@string/addPhoto"
+                android:textColor="#19A3D1"
+                android:textSize="18dp" />
+        </RelativeLayout>
+
+        <!-- medicine name -->
+
+        <LinearLayout
+            android:id="@+id/containerMedicineName"
+            style="@style/containerLayoutStyle" >
+
+            <LinearLayout
+                android:id="@+id/headerMedicineName"
+                style="@style/clickableHeader" >
+
+                <TextView
+                    android:id="@+id/medicineNameHeaderTextView"
+                    style="@style/textViewStyle"
+                    android:text="@string/medicineName" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentMedicineName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:id="@+id/contentMedicineNameError"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    android:visibility="gone" >
+
+                    <TextView
+                        android:id="@+id/medicineNameEmptyError"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="@string/medicineNameEmpty"
+                        android:textColor="#66E066"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <EditText
+                    android:id="@+id/medicineNameEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_frame_style"
+                    android:hint="@string/addMedicineName"
+                    android:inputType="text"
+                    android:textColor="#19A3D1"
+                    android:textColorHint="#5EBFDF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- medicine name end -->
+
+
+        <!-- dose -->
+
+        <LinearLayout
+            android:id="@+id/containerDose"
+            style="@style/containerLayoutStyle" >
+
+            <LinearLayout
+                android:id="@+id/headerDose"
+                style="@style/clickableHeader" >
+
+                <TextView
+                    android:id="@+id/doseHeaderTextView"
+                    style="@style/textViewStyle"
+                    android:text="@string/dose" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentDose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <EditText
+                    android:id="@+id/doseEditText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/round_frame_style"
+                    android:hint="@string/DoseNumber"
+                    android:inputType="numberDecimal"
+                    android:textColor="#19A3D1"
+                    android:textColorHint="#5EBFDF"
+                    android:textStyle="bold" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- dose end -->
+
+
+        <!-- medicine Type -->
+
+        <LinearLayout
+            android:id="@+id/containerMedicineType"
+            style="@style/containerLayoutStyle" >
+
+            <LinearLayout
+                android:id="@+id/headerMedicineType"
+                style="@style/clickableHeader" >
+
+                <TextView
+                    android:id="@+id/medicineTypeHeaderTextView"
+                    style="@style/textViewStyle"
+                    android:text="@string/medicineType" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentMedicineType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Spinner
+                    android:id="@+id/medicineTypeSpinner"
+                    style="@style/SpinnerTextViewItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:prompt="@string/medicineType"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- medicine type end -->
+
+
+        <!-- reminder times -->
+
+        <LinearLayout
+            android:id="@+id/containerReminder"
+            style="@style/containerLayoutStyle" >
+
+            <LinearLayout
+                android:id="@+id/headerReminderSpinner"
+                style="@style/clickableHeader" >
+
+                <TextView
+                    android:id="@+id/reminderHeader"
+                    style="@style/textViewStyle"
+                    android:text="@string/reminder" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentReminder"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Spinner
+                    android:id="@+id/frequencySpinner"
+                    style="@style/SpinnerTextViewItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:prompt="@string/frequency"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- reminder end -->
+
+
+        <!-- interval -->
+
+        <LinearLayout
+            android:id="@+id/containerInterval"
+            style="@style/containerLayoutStyle" >
+
+            <LinearLayout
+                android:id="@+id/headerInterval"
+                style="@style/clickableHeader" >
+
+                <TextView
+                    android:id="@+id/intervalHeaderTextView"
+                    style="@style/textViewStyle"
+                    android:text="@string/interval" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentInterval"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <Spinner
+                    android:id="@+id/intervalSpinner"
+                    style="@style/SpinnerTextViewItem"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_horizontal"
+                    android:padding="5dp"
+                    android:prompt="@string/interval"
+                    android:spinnerMode="dialog" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- interval end -->
+
+
+        <!-- remind date -->
+
+        <LinearLayout
+            android:id="@+id/headerReminderText"
+            style="@style/containerLayoutStyle" >
+
+            <LinearLayout
+                android:id="@+id/headerReminderTime"
+                style="@style/clickableHeader" >
+
+                <TextView
+                    android:id="@+id/reminderHeaderText"
+                    style="@style/textViewStyle"
+                    android:text="@string/reminderTime" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentReminderDatePicker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/RemindeTimePicker"
+                    style="@style/MyTimePicker"
+                    android:background="@drawable/round_frame_style"
+                    android:padding="10dp"
+                    android:text="@string/today" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <!-- remind date end -->
+
+
+        <!-- start date -->
+
+        <LinearLayout
+            android:id="@+id/containerStartDate"
+            style="@style/containerLayoutStyle" >
+
+            <LinearLayout
+                android:id="@+id/headerStartDate"
+                style="@style/clickableHeader" >
+
+                <TextView
+                    android:id="@+id/startDateHeaderTextView"
+                    style="@style/textViewStyle"
+                    android:text="@string/startDate" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentStartDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/startDatePickerTextView"
+                    style="@style/MyTimePicker"
+                    android:background="@drawable/round_frame_style"
+                    android:text="@string/today" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <!-- start date end -->
+
+
+        <!-- end date -->
+
+        <LinearLayout
+            android:id="@+id/containerEndDate"
+            style="@style/containerLayoutStyle" >
+
+            <LinearLayout
+                android:id="@+id/headerEndDate"
+                style="@style/clickableHeader" >
+
+                <TextView
+                    android:id="@+id/endDateHeaderTextView"
+                    style="@style/textViewStyle"
+                    android:text="@string/endDate" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/contentEndDate"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/endDatePickerTextView"
+                    style="@style/MyTimePicker"
+                    android:background="@drawable/round_frame_style"
+                    android:padding="10dp"
+                    android:text="@string/never" />
+            </LinearLayout>
+        </LinearLayout>
+        <!-- end date end -->
+
+    </LinearLayout>
+
+</ScrollView>

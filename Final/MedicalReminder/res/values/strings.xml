@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Medical Reminder</string>
+    <string name="title_activity_add_medicine">Add a medicine</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="medicineName">Medicine Name</string>
+    <string name="addPhoto">Capture Medicine Photo</string>
+    <string name="button">Button</string>
+    <string name="show">Show</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="takenow">Take Now</string>
+    <string name="textView">Text View</string>
+    <string name="edit">Edit</string>
+    <string name="delete">Delete</string>
+    <string name="editText" />
+    <string name="addMedicineName">Enter Medicine Name</string>
+    <string name="save">SAVE</string>
+    <string name="plusSign">+</string>
+    <string name="minusSign">-</string>
+    <string name="medicineType">Medicine Type</string>
+    <string name="reminder">Reminder Times</string>
+    <string name="reminderTime">Start Time</string>
+    <string name="frequency">Frequency</string>
+    <string name="DoseNumber">Enter Number of Dose</string>
+    <string name="two">Twice a day</string>
+    <string name="three">3 Times a day</string>
+    <string name="four">4 Times a day</string>
+    <string name="five">5 Times a day</string>
+    <string name="six">6 Times a day</string>
+    <string name="seven">7 Times a day</string>
+    <string name="eight">8 Times a day</string>
+    <string name="nine">9 Times a day</string>
+    <string name="ten">10 Times a day</string>
+    <string name="eleven">11 Times a day</string>
+    <string name="twelve">12 Times a day</string>
+    <string name="dose">Dose</string>
+
+    <string-array name="frequencyArray">
+        <item>Once a day</item>
+        <item>Twice a day</item>
+        <item>3 times a day</item>
+        <item>4 times a day</item>
+        <item>5 times a day</item>
+        <item>6 times a day</item>
+        <item>7 times a day</item>
+        <item>8 times a day</item>
+        <item>9 times a day</item>
+        <item>10 times a day</item>
+        <item>11 times a day</item>
+        <item>12 times a day</item>
+    </string-array>
+    <string-array name="medicineTypeArray">
+        <item>Injection</item>
+        <item>Pill</item>
+        <item>Syrup</item>
+        <item>Drops</item>
+        <item>Inhalant</item>
+        <item>Serum</item>
+    </string-array>
+
+    <string name="interval">Interval</string>
+
+    <string-array name="intervalArray">
+        <item>Daily</item>
+        <item>Weekly</item>
+        <item>Monthly</item>
+    </string-array>
+
+    <string name="startDate">Start Date</string>
+    <string name="time">8:00 AM</string>
+    <string name="endDate">End Date</string>
+    <string name="never">Never</string>
+    <string name="today">Today</string>
+
+    <!-- aya strings -->
+    <string name="signup">Register</string>
+    <string name="login">Login</string>
+    <string name="appname">Medical Reminder</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="female">Female</string>
+    <string name="male">Male</string>
+    <string name="gender">gender</string>
+    <string name="age">age</string>
+    <!-- aya end -->
+    <string name="confirmPassword">Confirm Password</string>
+    <string name="medicineNameEmpty">Enter name of active ingredient or brand name</string>
+    <string name="emptyHome">To add a new medicine, tap the &quot;+&quot; button at the top</string>
+    <string name="title_activity_dismiss">DismissActivity</string>
+
+</resources>

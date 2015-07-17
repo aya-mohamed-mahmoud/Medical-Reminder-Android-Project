@@ -1,0 +1,11 @@
+<CheckedTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/spinnerText"
+    android:background="#19A3D1"
+    android:textColor="#FFFFFF"
+    style="@style/SpinnerTextViewItem"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:ellipsize="marquee"
+    android:paddingLeft="15dp"
+    android:gravity="center_vertical"
+    android:singleLine="true" />

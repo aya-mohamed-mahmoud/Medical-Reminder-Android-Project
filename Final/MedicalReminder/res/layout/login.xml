@@ -1,0 +1,71 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bg4"
+    android:orientation="vertical" >
+
+    <!-- username -->
+
+    <LinearLayout
+        android:id="@+id/containerUserName"
+        style="@style/containerLayoutStyle" >
+
+        <TextView
+            android:id="@+id/username_text"
+            style="@style/textViewStyle"
+            android:text="@string/username" />
+
+        <LinearLayout
+            android:id="@+id/contentUserName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/username_edit"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_frame_style"
+                android:inputType="text"
+                android:textColor="#19A3D1" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- username end -->
+
+
+    <!-- password -->
+
+    <LinearLayout
+        android:id="@+id/containerPassword"
+        style="@style/containerLayoutStyle" >
+
+        <TextView
+            android:id="@+id/password_text"
+            style="@style/textViewStyle"
+            android:text="@string/password" />
+
+        <LinearLayout
+            android:id="@+id/contentPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <EditText
+                android:id="@+id/password_edit"
+                style="@style/textViewStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/round_frame_style"
+                android:inputType="textPassword"
+                android:textColor="#19A3D1" />
+        </LinearLayout>
+    </LinearLayout>
+    <!-- password end -->
+
+    <Button
+        android:id="@+id/login_btn"
+        style="@style/buttonStyle"
+        android:background="@drawable/round_button_style"
+        android:text="@string/login" />
+
+</LinearLayout>
